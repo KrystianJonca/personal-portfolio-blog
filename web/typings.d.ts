@@ -24,6 +24,6 @@ export interface Project {
   name: string;
   image: string;
   desc: string;
-  link: string;
+  Link: string;
   techstack: Array<string>;
 }
