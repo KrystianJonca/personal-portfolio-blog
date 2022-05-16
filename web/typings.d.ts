@@ -2,15 +2,19 @@ export interface Skill {
   tag: string;
 }
 
+interface Slug {
+  current: string;
+}
+
 export interface PreviewPost {
   title: string;
-  slug: string;
+  slug: Slug;
   mainImage: string;
 }
 
 export interface Post {
   title: string;
-  slug: string;
+  slug: Slug;
   mainImage: string;
   publishedAt: Date;
   body: any;
