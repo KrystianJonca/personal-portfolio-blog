@@ -13,12 +13,6 @@ const Posts: React.FC<IPostsProps> = ({ posts }) => {
         {posts.map((post) => (
           <PostCard key={post.slug.current} post={post} />
         ))}
-        {posts.map((post) => (
-          <PostCard key={post.slug.current} post={post} />
-        ))}
-        {posts.map((post) => (
-          <PostCard key={post.slug.current} post={post} />
-        ))}
       </div>
 
       <style jsx>
