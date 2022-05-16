@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          max-width: 980px;
+          max-width: 760px;
         }
         .navigation-logo {
           cursor: pointer;
