@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import { Header, SocialLink, Skills } from '../components';
+import { Header, SocialLink, Skills, Posts } from '../components';
 import { FaGithub, FaTwitter, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 
 import { getClient } from '../lib/sanity.server';
@@ -21,7 +21,6 @@ interface IHomeProps {
 }
 
 const Home: NextPage<IHomeProps> = ({ posts, projects, skills }) => {
-  console.log(posts, projects, skills);
   return (
     <>
       <Head>
@@ -51,6 +50,7 @@ const Home: NextPage<IHomeProps> = ({ posts, projects, skills }) => {
           <h2>
             <span className="section-heading">Latest posts</span>
           </h2>
+          <Posts posts={posts} />
         </section>
         <section className="section">
           <h2>
@@ -103,7 +103,8 @@ const Home: NextPage<IHomeProps> = ({ posts, projects, skills }) => {
           .links {
             display: flex;
             justify-content: center;
-            align-items: baseline;
+            align-items: center;
+            flex-wrap: wrap;
           }
         `}
       </style>
@@ -117,7 +118,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const posts = await sanityClient.fetch(queryLatestPosts);
   const projects = await sanityClient.fetch(queryHighlightedProjects);
   const skills = await sanityClient.fetch(querySkills);
-  console.log(sanityClient, skills);
+
   return {
     props: {
       posts,
