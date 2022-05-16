@@ -16,7 +16,7 @@ const Header: React.FC = () => {
             Eighteen years old passionate and enthusiastic programmer, based in
             Poland, who has worked with multiple modern front-end as well as
             full-stack technologies. Writing quality JavaScript code for 4+
-            years.
+            years, striving to improve everyday.
           </p>
         </div>
       </header>
