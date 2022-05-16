@@ -41,7 +41,6 @@ export default {
     select: {
       title: 'title',
       slug: 'slug',
-      subtitle: 'publishedAt',
       media: 'mainImage',
     },
   },
