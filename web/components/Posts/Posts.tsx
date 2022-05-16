@@ -25,6 +25,13 @@ const Posts: React.FC<IPostsProps> = ({ posts }) => {
             margin: 0 auto;
             flex-wrap: wrap;
           }
+          @media only screen and (max-width: 600px) {
+            .posts {
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+            }
+          }
         `}
       </style>
     </>
