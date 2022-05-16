@@ -6,11 +6,11 @@ import { GetStaticProps } from 'next';
 import { Posts } from '../../components';
 import { PreviewPost } from '../../typings';
 
-interface IHomeProps {
+interface IBlogProps {
   posts: Array<PreviewPost>;
 }
 
-const Blog: NextPage = ({ posts }) => {
+const Blog: NextPage<IBlogProps> = ({ posts }) => {
   return (
     <>
       <Head>
@@ -25,7 +25,7 @@ const Blog: NextPage = ({ posts }) => {
         <Posts posts={posts} />
       </main>
 
-      <style jsx global>
+      <style jsx>
         {`
           .page-title {
             font-weight: 400;
@@ -37,6 +37,12 @@ const Blog: NextPage = ({ posts }) => {
             max-width: 540px;
             margin: 0 auto;
             margin-bottom: 2rem;
+          }
+          @media only screen and (max-width: 600px) {
+            .page-title {
+              font-size: 2.5rem;
+              margin: 1rem;
+            }
           }
         `}
       </style>
