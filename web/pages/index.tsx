@@ -1,9 +1,8 @@
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import { Header, SocialLink, Skills, Posts } from '../components';
+import { Header, SocialLink, Skills, Posts, Projects } from '../components';
 import { FaGithub, FaTwitter, FaEnvelope, FaLinkedin } from 'react-icons/fa';
-
 import { getClient } from '../lib/sanity.server';
 
 import {
@@ -21,6 +20,7 @@ interface IHomeProps {
 }
 
 const Home: NextPage<IHomeProps> = ({ posts, projects, skills }) => {
+  console.log(projects);
   return (
     <>
       <Head>
@@ -39,6 +39,7 @@ const Home: NextPage<IHomeProps> = ({ posts, projects, skills }) => {
           <h2>
             <span className="section-heading">Projects</span>
           </h2>
+          <Projects projects={projects} />
         </section>
         <section className="section">
           <h2>

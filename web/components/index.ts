@@ -3,3 +3,4 @@ export { default as Header } from './Header/Header';
 export { default as SocialLink } from './SocialLink';
 export { default as Skills } from './Skills/Skills';
 export { default as Posts } from './Posts/Posts';
+export { default as Projects } from './Projects/Projects';
