@@ -29,7 +29,7 @@ const PostCard: React.FC<IPostCardProps> = ({ post }) => {
       <style jsx>
         {`
           .post {
-            margin: 0.5rem;
+            margin: 1.5rem 0.5rem;
             cursor: pointer;
             border-radius: 10px;
           }
