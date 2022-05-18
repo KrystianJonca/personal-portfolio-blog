@@ -9,7 +9,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { Post } from '../../typings';
 import { ParsedUrlQuery } from 'querystring';
 import { PortableText } from '@portabletext/react';
-
+import { motion } from 'framer-motion'
 interface IBlogPostProps {
   post: Post;
 }
@@ -21,7 +21,7 @@ const ptComponents = {
         return null;
       }
       return (
-        <img
+        <motion.img
           alt={value.alt || ' '}
           loading="lazy"
           src={urlFor(value).fit('max').auto('format')}
@@ -83,7 +83,7 @@ const BlogPost: NextPage<IBlogPostProps> = ({ post }) => {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-contet: center;
+            justify-content: center;
             font-size: 1.2rem;
           }
         `}
