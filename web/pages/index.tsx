@@ -20,7 +20,6 @@ interface IHomeProps {
 }
 
 const Home: NextPage<IHomeProps> = ({ posts, projects, skills }) => {
-  console.log(projects);
   return (
     <>
       <Head>
