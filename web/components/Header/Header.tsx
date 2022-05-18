@@ -1,11 +1,12 @@
 import React from 'react';
+import Model from '../Model/Model';
 
 const Header: React.FC = () => {
   return (
     <>
       <header className="header">
         {/* Three.js */}
-        <div>2d Modal</div>
+        <Model />
         <div className="header-text">
           <h1 className="header-text_title">
             <span className="header-text_greetings">Hello, I am</span>{' '}
