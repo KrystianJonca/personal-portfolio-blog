@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { Header, SocialLink, Skills, Posts, Projects } from '../components';
 import { FaGithub, FaTwitter, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import { getClient } from '../lib/sanity.server';
-
+import Link from 'next/link';
 import {
   queryLatestPosts,
   queryHighlightedProjects,
@@ -39,6 +39,11 @@ const Home: NextPage<IHomeProps> = ({ posts, projects, skills }) => {
             <span className="section-heading">Projects</span>
           </h2>
           <Projects projects={projects} />
+          <div className="link-container">
+            <span className="link">
+              <Link href="/portfolio">See more</Link>
+            </span>
+          </div>
         </section>
         <section className="section">
           <h2>
@@ -87,11 +92,10 @@ const Home: NextPage<IHomeProps> = ({ posts, projects, skills }) => {
             margin: 0 1.5rem;
           }
           .section {
-            text-align: center;
+            text-align: left;
             max-width: 540px;
             margin: 0 auto;
             margin-bottom: 2rem;
-            text-align: left;
           }
           .section-heading {
             padding-bottom: 0.2rem;
@@ -105,6 +109,21 @@ const Home: NextPage<IHomeProps> = ({ posts, projects, skills }) => {
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+          }
+          .link-container {
+            display: grid;
+            place-items: center;
+          }
+          .link {
+            display: inline-block;
+            margin: 0.2rem;
+            padding: 0.6rem 1rem;
+            border-radius: 10px;
+            transition: all 0.2s ease-in-out;
+            font-size: 1.2rem;
+          }
+          .link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
           }
         `}
       </style>
