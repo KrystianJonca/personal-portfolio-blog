@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { Project } from '../../typings';
 import { urlFor } from '../../lib/sanity';
 import ProjectModal from './ProjectModal';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 interface IProjectCardProps {
   project: Project;
@@ -52,7 +52,8 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
       )}
 
       <div className="project" onClick={handleOpen}>
-        <motion.img src={url} alt={project.name} className="project-image" />
+        {/* eslint-disable */}
+        <img src={url} alt={project.name} loading='lazy' className="project-image" />
 
         <h3 className="project-title">{project.name}</h3>
       </div>

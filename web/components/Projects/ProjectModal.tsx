@@ -34,7 +34,6 @@ const variants = {
 };
 
 const ProjectModal: React.FC<IProjectModalProps> = ({
-  isOpen,
   project,
   imgUrl,
   handleClose,

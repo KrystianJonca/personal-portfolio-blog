@@ -9,14 +9,15 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { Post } from '../../typings';
 import { ParsedUrlQuery } from 'querystring';
 import { PortableText } from '@portabletext/react';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+
 interface IBlogPostProps {
   post: Post;
 }
 
 const ptComponents = {
   types: {
-    image: ({ value }) => {
+    image: ({ value }: any) => {
       if (!value?.asset?._ref) {
         return null;
       }
@@ -24,7 +25,7 @@ const ptComponents = {
         <motion.img
           alt={value.alt || ' '}
           loading="lazy"
-          src={urlFor(value).fit('max').auto('format')}
+          src={urlFor(value).fit('max').auto('format').url()}
           className="post-content_image"
         />
       );
@@ -41,7 +42,7 @@ const BlogPost: NextPage<IBlogPostProps> = ({ post }) => {
   return (
     <>
       <Head>
-        <title> | Krystian Jonca</title>
+        <title>{post.title} | Krystian Jonca</title>
       </Head>
 
       <header>

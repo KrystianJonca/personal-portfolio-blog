@@ -14,7 +14,7 @@ const variants = {
   exit: { opacity: 0, x: -0, y: 20 },
 };
 
-function MyApp({ Component, pageProps, router }: AppProps) {
+const App = ({ Component, pageProps, router }: AppProps) => {
   return (
     <>
       <NextNProgress color="#ecf0f1" />
@@ -45,4 +45,4 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   );
 }
 
-export default MyApp;
+export default App;

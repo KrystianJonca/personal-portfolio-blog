@@ -2,7 +2,6 @@ import React, { useMemo } from 'react';
 import { PreviewPost } from '../../typings';
 import { urlFor } from '../../lib/sanity';
 import Link from 'next/link';
-
 interface IPostCardProps {
   post: PreviewPost;
 }
@@ -16,9 +15,11 @@ const PostCard: React.FC<IPostCardProps> = ({ post }) => {
     <>
       <Link href={`/blog/${post.slug.current}`}>
         <div className="post">
+          {/* eslint-disable */}
           <img
             src={url}
             alt={post.title}
+            loading="lazy"
             width="231"
             height="130"
             className="post-image"
