@@ -53,7 +53,12 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
 
       <div className="project" onClick={handleOpen}>
         {/* eslint-disable */}
-        <img src={url} alt={project.name} loading='lazy' className="project-image" />
+        <img
+          src={url}
+          alt={project.name}
+          loading="lazy"
+          className="project-image"
+        />
 
         <h3 className="project-title">{project.name}</h3>
       </div>
@@ -64,6 +69,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({ project }) => {
             margin: 1.5rem 0.5rem;
             cursor: pointer;
             border-radius: 10px;
+            max-width: 231px;
           }
           .project-image {
             border-radius: 10px;
