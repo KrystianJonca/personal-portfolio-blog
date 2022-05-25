@@ -15,9 +15,14 @@ const Header: React.FC = () => {
           <p className="header-text_bottom">Professional Web Developer</p>
           <p className="header-text_about_me">
             Eighteen years old passionate and enthusiastic programmer, based in
-            Poland, who has worked with multiple modern front-end as well as
-            full-stack technologies. Writing quality JavaScript code for 4+
-            years, striving to improve everyday.
+            Poland, who has worked with multiple modern front-end & full-stack
+            technologies to create amazing projects. Writing quality code for 5+
+            years, learning and improving every day.
+          </p>
+          <p className="header-text_about_me">
+            I am a highly motivated person with strong programming foundations,
+            who wants to further expand his skill set by working in a
+            professional team, on challenging projects.
           </p>
         </div>
       </header>
