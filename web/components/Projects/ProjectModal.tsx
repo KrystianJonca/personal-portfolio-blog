@@ -4,7 +4,7 @@ import Backdrop from './Backdrop';
 import { Project } from '../../typings';
 import Image from 'next/image';
 import SkillTag from '../Skills/SkillTag';
-
+import Link from 'next/link';
 interface IProjectModalProps {
   isOpen: boolean;
   imgUrl: string;
@@ -50,8 +50,16 @@ const ProjectModal: React.FC<IProjectModalProps> = ({
           exit="exit"
         >
           <span className="project_modal-image">
-            <Image src={imgUrl} alt={project.name} width="640" height="360" />
+            <a
+              href={project.Link}
+              target="_blank"
+              rel="noreferrer"
+              className="project_modal-link"
+            >
+              <Image src={imgUrl} alt={project.name} width="640" height="360" />
+            </a>
           </span>
+
           <h3 className="project_modal-title">{project.name}</h3>
           <p className="project_modal-desc">{project.desc}</p>
           <div className="project_modal-techstack">
@@ -91,6 +99,9 @@ const ProjectModal: React.FC<IProjectModalProps> = ({
           .project_modal-techstack {
             display: flex;
             flex-wrap: wrap;
+          }
+          .project_modal-link {
+            height: 100%;
           }
           @media only screen and (max-width: 600px) {
             .project_modal-title {
