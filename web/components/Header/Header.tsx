@@ -14,15 +14,7 @@ const Header: React.FC = () => {
           </h1>
           <p className="header-text_bottom">Professional Web Developer</p>
           <p className="header-text_about_me">
-            Eighteen years old passionate and enthusiastic programmer, based in
-            Poland, who has worked with multiple modern front-end & full-stack
-            technologies to create amazing projects. Writing quality code for 5+
-            years, learning and improving every day.
-          </p>
-          <p className="header-text_about_me">
-            I am a highly motivated person with strong programming foundations,
-            who wants to further expand his skill set by working in a
-            professional team, on challenging projects.
+            I'm an 18 years old problem solver and a fast learner with strong communication skills. I've been focused on programming in JavaScript for over 4 years now, during that time I've used multiple modern front-end and back-end technologies to create blazingly fast apps with great UI/UX, and best practices in mind.
           </p>
         </div>
       </header>
